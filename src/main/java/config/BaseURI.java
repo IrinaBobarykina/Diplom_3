@@ -1,2 +1,5 @@
-package config;public class BaseURI {
+package config;
+
+public class BaseURI {
+    public static final String BASE_URI = "https://stellarburgers.nomoreparties.site/";
 }
