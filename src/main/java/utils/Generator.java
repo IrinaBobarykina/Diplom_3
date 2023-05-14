@@ -1,27 +1,31 @@
-package config;
+package utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import user.User;
 
 public class Generator {
     private static final String domain_name = "@gmail.com";
 
     public static String generateUserName() {
-        String name = RandomStringUtils.randomAlphabetic(8);
-        return name;
+        return RandomStringUtils.randomAlphabetic(8);
     }
 
     public static String generateUserEmail() {
-        String email = RandomStringUtils.randomAlphabetic(8) + domain_name;
-        return email;
+        return RandomStringUtils.randomAlphabetic(8) + domain_name;
     }
 
     public static String generateUserPassword() {
-        String password = RandomStringUtils.randomAlphabetic(8);
-        return password;
+        return RandomStringUtils.randomAlphabetic(8);
     }
 
     public static String generateWrongUserPassword() {
-        String wrongPassword = RandomStringUtils.randomAlphabetic(5);
-        return wrongPassword;
+        return RandomStringUtils.randomAlphabetic(5);
+    }
+
+    public static User generateUser() {
+        String name = generateUserName();
+        String email = generateUserEmail();
+        String password = generateUserPassword();
+        return new User(name, email, password);
     }
 }
