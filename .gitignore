@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/.idea/
+/target
+.DS_Store
+.allure
+
+
